@@ -1,0 +1,173 @@
+***********************
+Final Exam
+***********************
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+FOR QUESTIONS 1-5 REFER TO THE FOLLOWING VARIABLES AND INITIALIZATIONS:
+
+1.  Question. 
+        int a = 2, b = -3, c = 2; 
+
+        bool tval1 = false, tval2 = true;
+
+        char ch = ‘b’;
+
+        Assume each evaluation is legal and occurs immediately after this declaration.
+
+        What is the value of the following expression?
+
+        b + c * a
+
+    Ans. 1
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+2.  Question. What is the value of the following expression? (Refer to question 1.)
+    c % 5/2
+
+    Ans. 1
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+3.  Question. What is the value of the following expression? (Refer to question 1.)
+              -a * c++
+
+    Ans. -4
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+4.  Question.   What is the value of the following expression? (Refer to question 1.)
+                tval1 && tval2
+                
+    Ans. false
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+5.  Question.   What is the value of the following expression? (Refer to question 1.)
+                ch += 2
+
+    Ans. 'd'
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+6.  Question. What did D. Ritchie do?
+
+    Ans.    all of the above
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+7.  Question. What did B. Stroustrup do?
+
+    Ans. invented c++
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+8.  Question. What did E. Dijkstra invent?
+
+    Ans. shortest path algorithm
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+9.  Question. What did L. Euler invent?
+    
+    Ans.    graph theory
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+10. Question. printin is a keyword in C++11. 
+    
+    Ans. false
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+11. Question.   the expression f(1) || (!g(2)), and without knowing the return types of f(1) and g(2), you can still assert that 
+                f(1) will always be evaluated before g(2) (which may not get evaluated at all).
+    
+    Ans. true
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+12. Question. FOR QUESTIONS 12–16 REFER TO THE FOLLOWING:
+
+        Answer number that is returned by mystery() for each answer in printout.
+        //templates what gets printed
+        #include <iostream>
+        using namespace std;
+        template <class T1, class T2>
+        int mystery(T1& a, T2 b, int c)
+        {
+            T1 t = a;
+            a = a + b;
+            return ( a - t + c);
+        }
+        int main(void)
+        {
+            int a = 3;
+            double b = 2.5;
+            int c = 1;
+            cout << " answer 1 is  " << mystery(a, 2, c) << endl;
+            cout << " answer 2 is  " << mystery(a, 1, c) << endl;
+            a = 5;
+            cout << " answer 3 is  " << mystery(a, b, c) << endl;
+            a = 2; 
+            b = 2.5;
+            cout << " answer 4 is  " << mystery(a, b, b) << endl;
+            cout << " answer 5 is  " << mystery(a,mystery(a, b, b),c)<< endl;
+            return 0;
+        }
+    
+    Ans. 3
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+13. Question. Answer 2 is:
+
+    Ans. 2
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+14. Question. Answer 3 is:
+    
+    Ans. 3
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+15. Question. Answer 4 is:
+    
+    Ans. 4
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+16. Question. Answer 5 is:
+    
+    Ans. 5
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+17. Question. FOR QUESTIONS 17–19 REFER TO THIS WEIGHTED UNDIRECTED GRAPH
+    
+    Ans. 19
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+18. Question. What is the cost of its maximum spanning tree? (A maximum weighted spanning tree is a spanning tree whose edges add up to a max for all possible spanning trees.)
+            (Refer to the graph in question 17.)
+    
+    Ans. 30
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+19. Question. What is the shortest path cost from node 0 to node 2?
+            (Refer to the graph in question 17.)
+
+    Ans. 9
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+20. Question. FOR QUESTIONS 20–24 REFER TO THE FOLLOWING:
+            //What does the following print
+            #include <iostream>
+            #include <vector>
+            #include <numeric>
+            using namespace std;
+            int main()
+            {
+                vector<int> data(5,1);
+                int sum {0};
+            cout << sum << endl;
+                for(auto element : data)
+                        sum += element;
+                cout << sum << endl;
+            for(auto p = ++data.begin(); p != --data.end(); ++p)
+                        sum += *p;
+                cout << sum << endl;
+                sum = 0;
+                data.push_back(2);
+                data.push_back(3);
+                for(auto element : data)
+                        sum += element;
+                cout << sum << endl;
+            cout << accumulate(data.begin(), data.end(), data[0]) << endl;
+            }
+    What does the first line print? 
+    
+    Ans. 0
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+21. Question. What does the second line print? (Refer to question 20.)
+
+    Ans. 5
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+22. What does the third line print? (Refer to question 20.)
+
+    Ans. 8
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+23. Question. What does the fourth line print? (Refer to question 20.)
+
+    Ans. 10
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+24. Question. What does the fifth line print?
+
+    Ans. 11
